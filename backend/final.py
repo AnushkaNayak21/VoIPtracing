@@ -417,7 +417,7 @@ import plotly.express as px
 from dash import Dash, dcc, html
 from pyngrok import ngrok
 
-# Load your CSV
+
 df = pd.read_csv("suspect_payloads.csv")
 suspicious = df[df['flag'].notna()]
 
@@ -459,11 +459,11 @@ app.layout = html.Div([
     ])
 ])
 
-# --- Expose Dashboard with ngrok ---
+
 public_url = ngrok.connect(8050)
 print("🔗 Dashboard URL:", public_url)
 
-# Run App
+
 app.run(host="0.0.0.0", port=8050)
 
 !pip install jupyter-dash -q
@@ -472,43 +472,15 @@ from dash import Dash, dcc, html
 import plotly.express as px
 import pandas as pd
 
-# Load the data (assuming df is already loaded and processed from previous steps)
-# If not, you might need to reload or ensure df is available in the environment.
-# For now, I'll assume df and suspicious are available from previous successful runs.
-# df = pd.read_csv("suspect_payloads.csv")
-# suspicious = df[df['flag'].notna()]
 
-# Create the figure for the bar chart (assuming fig1 and fig2 are available)
-# fig1 = px.bar(
-#     suspicious['src_ip'].value_counts().head(10),
-#     title="Top 10 Suspicious Source IPs",
-#     labels={"value": "Count", "index": "Source IP"}
-# )
-
-# fig2 = px.pie(
-#     suspicious,
-#     names='method',
-#     title="Distribution of Suspicious SIP Methods"
-# )
-
-
-# Change JupyterDash to Dash
 app = Dash(__name__)
 
-# same layout as before...
-# Assuming fig1 and fig2 were created in a previous cell and are available
 app.layout = html.Div([
     html.H1("📡 VoIP SIP Tracing Dashboard"),
     dcc.Graph(figure=fig1),
     dcc.Graph(figure=fig2),
 ])
 
-# The run_server call is removed as it was causing the error and requires ngrok setup.
-# If you want to view the dashboard, you would typically need to use ngrok or a similar service
-# to expose the Dash app running on the Colab instance.
-# For now, the code defines the app but doesn't run the server.
-
-# If you want to display the figures individually, you can use fig1.show() and fig2.show()
 
 !pip install dash -q
 
@@ -535,7 +507,6 @@ app.layout = html.Div([
     dcc.Graph(figure=fig2),
 ])
 
-# ✅ New run method (works in Colab/Jupyter)
 app.run(host="0.0.0.0", port=8050, debug=False)
 
 !pip install colab-dash -q
