@@ -1,0 +1,57 @@
+[
+  {
+    "timestamp":"2011-08-01T06:37:30.454022",
+    "caller":"201",
+    "callee":"101",
+    "src_ip":"10.33.6.101",
+    "dst_ip":"10.33.6.102",
+    "duration":0.024724,
+    "reasons":[
+      "Very short call (<5s)"
+    ]
+  },
+  {
+    "timestamp":"2011-08-01T06:37:30.490270",
+    "caller":"201",
+    "callee":"101",
+    "src_ip":"10.33.6.102",
+    "dst_ip":"10.33.6.100",
+    "duration":0.040655,
+    "reasons":[
+      "Very short call (<5s)"
+    ]
+  },
+  {
+    "timestamp":"2011-08-01T06:37:30.549798",
+    "caller":"201",
+    "callee":"101",
+    "src_ip":"10.33.6.100",
+    "dst_ip":"10.33.6.102",
+    "duration":0.025817,
+    "reasons":[
+      "Very short call (<5s)"
+    ]
+  },
+  {
+    "timestamp":"2011-08-01T06:37:31.162108",
+    "caller":"201",
+    "callee":"101",
+    "src_ip":"10.33.6.100",
+    "dst_ip":"10.33.6.102",
+    "duration":0.017053,
+    "reasons":[
+      "Very short call (<5s)"
+    ]
+  },
+  {
+    "timestamp":"2011-08-01T06:37:31.201173",
+    "caller":"201",
+    "callee":"101",
+    "src_ip":"10.33.6.101",
+    "dst_ip":"10.33.6.100",
+    "duration":2.210111,
+    "reasons":[
+      "Very short call (<5s)"
+    ]
+  }
+]
